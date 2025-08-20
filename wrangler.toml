@@ -1,0 +1,23 @@
+name = "status-page"
+main = "backend/src/index.ts"
+compatibility_date = "2025-03-10"
+compatibility_flags = ["nodejs_compat"]
+
+minify = true # 生产环境压缩代码
+
+# 添加定时触发器，每分钟执行一次监控检查
+[triggers]
+crons = ["* * * * *"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "xugou_db"
+database_id = "4744118e-297c-45d7-a463-85d8e0317c70"
+
+[assets]
+binding = "ASSETS"
+directory = "frontend/dist"
+not_found_handling = "single-page-application"
+
+[version_metadata]
+binding = "CF_VERSION_METADATA"

@@ -10,7 +10,7 @@
     "build:backend": "cd backend && pnpm run build",
     "generate": "cd backend && pnpm run db:generate",
     "build": "pnpm run generate && pnpm run build:frontend && pnpm run build:backend",
-    "deploy": "wrangler deploy",
+    "deploy": "npx wrangler deploy",
     "dev:preview": "pnpm run build && cd backend && pnpm run dev",
     "preview": "cd backend && pnpm run dev"
   }

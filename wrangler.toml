@@ -2,7 +2,10 @@ name = "status-page"
 main = "backend/src/index.ts"
 compatibility_date = "2025-03-10"
 compatibility_flags = ["nodejs_compat"]
-
+routes = [
+  { pattern = "dataflow.run", custom_domain = true },
+  { pattern = "status.dataflow.run", custom_domain = true }
+]
 minify = true # 生产环境压缩代码
 
 # 添加定时触发器，每分钟执行一次监控检查
